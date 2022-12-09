@@ -1,6 +1,6 @@
 @import "../../sassStyles/variables";
 
-.submit_form {
+.submit-form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,9 +11,16 @@
   height: 400px;
   background-color: $veryDarkBlue;
   border-radius: 30px;
+
+  @media screen and (max-width: 400px) {
+    width: 300px;
+    padding: 10px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
 }
 
-.submit_form-circle-container {
+.submit-form__circle-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,36 +29,69 @@
   color: $textLight1Color;
   background-color: $darkBlue;
   border-radius: 50%;
+  transition: 0.5s;
+
+  &--rating {
+    &:hover {
+      background-color: $orangeColor;
+    }
+  }
 }
 
-.submit_form-title {
+.submit-form__title {
   color: $white;
 }
 
-.submit_form-text {
+.submit-form__text {
   color: $textLight1Color;
   margin-bottom: 30px;
 }
 
-.submit_form-rating-container {
+.submit-form__rating-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
-.submit_form-input {
+.submit-form__input {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.submit_form-button {
+.submit-form__button {
   width: 100%;
   height: 40px;
   color: $white;
   background-color: $orangeColor;
   border-radius: 20px;
   border: none;
+  transition: 0.5s;
+
+  &:hover {
+    color: $orangeColor;
+    background-color: $white;
+  }
+}
+
+.submit-form__image-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.submit-form__result-text {
+  margin: 0 30px;
+
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: $orangeColor;
+  background-color: $darkBlue;
+  border-radius: 50px;
 }
